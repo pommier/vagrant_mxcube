@@ -6,10 +6,12 @@ apt-get install -y python-qwt5-qt3
 apt-get install -y python-louie
 sudo apt-get install -y git-core
 sudo apt-get install -y python-setuptools
+sudo apt-get install -y python-sip-dev
+sudo apt-get install -y python-sip
 sudo easy_install pip
 pip install gevent
+pip install jsonpickle
 apt-get install -y libgsl0-dev
-apt-get install -y python-sip
 apt-get install -y python-qt-dev
 apt-get install -y libcv-dev
 git clone https://github.com/mxcube/pychooch.git
@@ -29,6 +31,6 @@ cd mxcube
 git clone https://github.com/mxcube/HardwareRepository.git
 git clone https://github.com/mxcube/BlissFramework.git
 cd ..
-sudo chmod 775 -R mxcube/
+chown -R vagrant:vagrant /home/vagrant/mxcube 
 rm -rf /var/www
 ln -fs /vagrant /var/www
