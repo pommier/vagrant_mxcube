@@ -32,5 +32,8 @@ git clone https://github.com/mxcube/HardwareRepository.git
 git clone https://github.com/mxcube/BlissFramework.git
 cd ..
 chown -R vagrant:vagrant /home/vagrant/mxcube 
+cd mxcube
+cp example_mxcube.gui mxcube.gui
+cd ..
 rm -rf /var/www
 ln -fs /vagrant /var/www
