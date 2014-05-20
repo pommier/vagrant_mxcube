@@ -117,7 +117,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.validation_client_name = "ORGNAME-validator"
 end
 Vagrant.configure("2") do |config|
-  config.vm.box = "test"
+  config.vm.box = "xfce"
   config.env_proxy.http = "http://proxy.esrf.fr:3128"
   config.env_proxy.https = "http://proxy.esrf.fr:3128"
   config.proxy.http     = "http://proxy.esrf.fr:3128"

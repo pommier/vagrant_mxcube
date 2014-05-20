@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 apt-get update
-apt-get install -y ubuntu-desktop
+apt-get install -y xfce4
 apt-get install python2.6 python2.6-dev
 apt-get install -y python-qwt5-qt3 
 apt-get install -y python-louie
@@ -37,3 +37,8 @@ cp example_mxcube.gui mxcube.gui
 cd ..
 rm -rf /var/www
 ln -fs /vagrant /var/www
+cd /home/vagrant/
+sudo apt-get install -y linux-headers-$(uname -r)
+echo 'if [ "$(tty)" = "/dev/tty1" -o "$(tty)" = "/dev/vc/1" ];' >> .bashrc
+echo 'then startxfce4'>> .bashrc
+echo 'fi' >> .bashrc
