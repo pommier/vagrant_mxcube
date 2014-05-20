@@ -118,8 +118,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 Vagrant.configure("2") do |config|
   config.vm.box = "xfce"
-  config.env_proxy.http = "http://proxy.esrf.fr:3128"
-  config.env_proxy.https = "http://proxy.esrf.fr:3128"
+  config.proxy.http = "http://proxy.esrf.fr:3128"
+  config.proxy.https = "http://proxy.esrf.fr:3128"
   config.proxy.http     = "http://proxy.esrf.fr:3128"
   config.proxy.https    = "http://proxy.esrf.fr:3128"
   config.proxy.no_proxy = "localhost,127.0.0.1"
