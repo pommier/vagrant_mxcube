@@ -37,8 +37,22 @@ cp example_mxcube.gui mxcube.gui
 cd ..
 rm -rf /var/www
 ln -fs /vagrant /var/www
+#autoboot on xfce4
 cd /home/vagrant/
 sudo apt-get install -y linux-headers-$(uname -r)
 echo 'if [ "$(tty)" = "/dev/tty1" -o "$(tty)" = "/dev/vc/1" ];' >> .bashrc
 echo 'then startxfce4'>> .bashrc
 echo 'fi' >> .bashrc
+#shortcut for mxcube
+echo "[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=mxcube
+Comment=
+Categories=Application;
+Exec=/home/vagrant/mxcube/bin/mxcube --hardwareRepository=/home/vagrant/mxcube/ExampleFiles/HardwareObjects.xml/
+Icon=xfce-utils
+Terminal=true
+StartupNotify=false">>/home/vagrant/Desktop/shortcut.desktop
+
