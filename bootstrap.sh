@@ -44,6 +44,7 @@ echo 'if [ "$(tty)" = "/dev/tty1" -o "$(tty)" = "/dev/vc/1" ];' >> .bashrc
 echo 'then startxfce4'>> .bashrc
 echo 'fi' >> .bashrc
 #shortcut for mxcube
+sudo mkdir /home/vagrant/Desktop
 echo "[Desktop Entry]
 Version=1.0
 Encoding=UTF-8
